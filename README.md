@@ -27,20 +27,66 @@ Pygame allows for graphics to be created.
 ## Other Installs (will add later on if necessary) :white_large_square:
 To allow for speeding up the neural networks training process.
 
-**Install WSL2** :white_check_mark:
-[learn.microsoft.com/en-us/windows/wsl/install]
+### Install WSL2 :white_check_mark:
+https://learn.microsoft.com/en-us/windows/wsl/install
 
-**Install CuDNN and CUDA toolkit** :white_large_square:
-[https://docs.nvidia.com/deeplearning/cudnn/installation/linux.html]
+> [!IMPORTANT]
+> **To launch Ubuntu enter `wsl.exe -d Ubuntu`.**
+
+Regular Update and upgrade packages required. So make the following a habit:
+`sudo apt update && sudo apt upgrade`
+https://learn.microsoft.com/en-us/windows/wsl/setup/environment
+
+Using **Windows Terminal** you can enter `Ctrl+Shift+P` to get the **Command Palette**.
+https://learn.microsoft.com/en-us/windows/terminal/install#invoke-the-command-palette
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+**Linux and Bash**
+https://learn.microsoft.com/en-us/windows/wsl/tutorials/linux
+
+> [!CAUTION]
+> Tensor Flow requires Python 3.8, 3.9, 3.10, 3.11. Which means Python 3.12+ is not yet supported. Version of Python as of this writing is 3.13.3.
+> Using WSL2 you can install Python 3.11 and pip (using `pyenv`).
+
+### Install pyenv with Python version 3.11.9
+1. From CMD prompt enter in `wsl.exe -d Ubuntu`.
+2. Enter `sudo apt update`.
+3. Enter ```sudo apt install -y build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev curl \
+    llvm libncursesw5-dev xz-utils tk-dev libxml2-dev \
+    libxmlsec1-dev libffi-dev liblzma-dev git```
+4. Enter `curl https://pyenv.run | bash`
+5. Then Enter in the following:
+   ```
+   # Add pyenv to shell
+   echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+   echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+   echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+   exec "$SHELL"
+   ```
+6. Enter `pyenv install 3.11.9`.
+7. Enter `pyenv global 3.11.9`.
+
+
+## Install CuDNN and CUDA toolkit** :white_large_square:
+https://docs.nvidia.com/deeplearning/cudnn/installation/linux.html
+
 
 ## Install Tensor Flow :white_large_square:
 Need Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017, 2019, and 2022.
-[https://learn.microsof.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170]
+https://learn.microsof.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
 `pip install tensorflow`
 
 `pip install tensorflow_datasets`
 
 `pip install matplotlib`
+
+> [!WARNING]
+> If above doesn't work then you should follow steps [Install pyenv with Python version 3.11.9](#Install-pyenv-with-Python-version-3.11.9).
+> Used **ChatGPT** to assist in resolution.
 
 
