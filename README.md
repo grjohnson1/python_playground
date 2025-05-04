@@ -90,3 +90,8 @@ https://learn.microsof.com/en-US/cpp/windows/latest-supported-vc-redist?view=msv
 > Used **ChatGPT** to assist in resolution.
 
 
+# Installs required by Python Script
+
+## pdf_keyword_search.py
+`pip install pdfplumber`
+`pip install pdfplumber rapidfuzz`
