@@ -153,7 +153,6 @@ def guessAnimal():
     global goButton, knowledgeBase
 
     goButton['state'] = tk.DISABLED
-    print('knowledgeBase =', knowledgeBase)
     possible = set(knowledgeBase.animals)
     notasked = list(knowledgeBase.queries)
     asked = dict()
