@@ -3,7 +3,7 @@
 ## Description
 In this I am going to start some python projects with the goal of working on some smaller AI works.
 
-Thanks given to **ChatGPT** and **Artificial Intelligence for Developers (in easysteps)*** book see [https://www.ineasysteps.com] or visit local library.
+Thanks given to **ChatGPT** and **Artificial Intelligence for Developers (in easysteps)*** book found on [https://www.ineasysteps.com] or a visit local library.
 
 So more to come.
 
